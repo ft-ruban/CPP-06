@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevoude <ldevoude@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/23 07:34:06 by ldevoude          #+#    #+#             */
-/*   Updated: 2026/02/23 08:04:29 by ldevoude         ###   ########.fr       */
+/*   Created: 2026/02/23 08:03:31 by ldevoude          #+#    #+#             */
+/*   Updated: 2026/02/23 08:04:17 by ldevoude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "../includes/ScalarConverter.hpp"
 
-//TODO faire une batterie de tests
+//define method
 
-int main(void){
-    std::cout<<"Hello World."<<std::endl;
-    return(0);
-}
+
+//define constructor
+
+//define cpy constructor
+
+//define override =
+
+//define destructor
