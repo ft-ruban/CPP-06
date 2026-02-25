@@ -6,7 +6,7 @@
 /*   By: ldevoude <ldevoude@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 07:40:00 by ldevoude          #+#    #+#             */
-/*   Updated: 2026/02/24 07:09:18 by ldevoude         ###   ########.fr       */
+/*   Updated: 2026/02/24 11:20:10 by ldevoude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <cctype>
+#include "charUtils.hpp"
 
 class ScalarConverter {
     public:
