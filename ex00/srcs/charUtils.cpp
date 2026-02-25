@@ -6,14 +6,13 @@
 /*   By: ldevoude <ldevoude@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 11:18:02 by ldevoude          #+#    #+#             */
-/*   Updated: 2026/02/25 09:58:24 by ldevoude         ###   ########.fr       */
+/*   Updated: 2026/02/25 10:32:44 by ldevoude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/charUtils.hpp"
-#include <stdlib.h>//tomv.hpp
 
-static void case_size_one(std::string representation){
+static void case_size_one(const std::string& representation){
         if(std::isprint(representation.at(0)) && !isdigit(representation.at(0)))
             std::cout<<"char: '"<<representation[0]<<"'"<<std::endl;
         else
@@ -21,37 +20,38 @@ static void case_size_one(std::string representation){
         return;
 }
 
-static void parsing_part(std::string representation){
+static bool parsing_part(const std::string& representation){
     bool test = false;
 
     if((!isdigit(representation.at(0)) && representation.at(0) != '+') ||
              (!isdigit(representation[representation.size() - 1]) && representation[representation.size() - 1] != 'f')){
         std::cout<<"char: impossible"<<std::endl;
-        return;
+        return(IMPOSSIBLE);
     }
     for(std::size_t i = 1; i < representation.size() - 1; i++){
         if(representation[i] == '.'){
-            if(representation[i + 1] != '0' || test == true){
+            if(i + 1 >= representation.size() - 1 || representation[i + 1] != '0' || test){
                 std::cout<<"char: impossible"<<std::endl;
-                return;
+                return(IMPOSSIBLE);
             }
             else
                 test = true;
         }
         else if(!isdigit(representation[i]) || (test == true && representation[i] != '0')){
             std::cout<<"char: impossible"<<std::endl;
-            return;
+            return(IMPOSSIBLE);
         }
     }
     if(representation[representation.size() - 1] == 'f' && test != true){
         std::cout<<"char: impossible"<<std::endl;
-        return;
+        return(IMPOSSIBLE);
     }
+    return(POSSIBLE);
 }
 
-static void display_part(std::string representation){
-    int i = std::atoi(representation.c_str()); //trycatch
-    if(i < 0 || i > 255)
+static void display_part(const std::string& representation){
+    int i = std::atoi(representation.c_str());
+    if(i < 0 || i > 127)
         std::cout<<"char: impossible"<<std::endl;
     else if(std::isprint(i))
         std::cout<<"char: '"<<static_cast<char>(i)<<"'"<<std::endl;
@@ -60,11 +60,12 @@ static void display_part(std::string representation){
     return;
 }
 
-void handleChar(std::string representation){
+void handleChar(const std::string& representation){
     if(representation.size()== 1)
-        return(case_size_one(representation));
+        case_size_one(representation);
     else{
-        parsing_part(representation);
-        return(display_part(representation));
+        if(parsing_part(representation) == POSSIBLE)
+            display_part(representation);
     }
+    return;
 }

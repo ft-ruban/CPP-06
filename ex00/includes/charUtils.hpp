@@ -6,7 +6,7 @@
 /*   By: ldevoude <ldevoude@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 11:17:18 by ldevoude          #+#    #+#             */
-/*   Updated: 2026/02/24 11:19:39 by ldevoude         ###   ########.fr       */
+/*   Updated: 2026/02/25 10:32:57 by ldevoude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 #define CHARUTILS_HPP
 
 #include <iostream>
+#include <stdlib.h>
 
-void handleChar(std::string representation);
+#define IMPOSSIBLE 1
+#define POSSIBLE 0
 
+void handleChar(const std::string& representation);
 
 #endif
