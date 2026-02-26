@@ -6,7 +6,7 @@
 /*   By: ldevoude <ldevoude@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 08:03:31 by ldevoude          #+#    #+#             */
-/*   Updated: 2026/02/25 11:13:40 by ldevoude         ###   ########.fr       */
+/*   Updated: 2026/02/25 15:18:16 by ldevoude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,10 @@ static void printAllImpossible(){
 
 // 1) if the string is empty then print all impossible and exit
 void ScalarConverter::convert(std::string representation){
-    if (representation.empty())
+    if (representation.empty()) // TODO rajouter des cas d'erreur generaux tel que x.f ou x.? ou xf
         return(printAllImpossible());
     handleChar(representation);
+    handleInt(representation);
 
    // if(representation)
    //then int

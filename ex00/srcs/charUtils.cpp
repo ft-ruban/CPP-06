@@ -6,7 +6,7 @@
 /*   By: ldevoude <ldevoude@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 11:18:02 by ldevoude          #+#    #+#             */
-/*   Updated: 2026/02/25 10:32:44 by ldevoude         ###   ########.fr       */
+/*   Updated: 2026/02/25 13:45:30 by ldevoude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void case_size_one(const std::string& representation){
             std::cout<<"char: Non displayable"<<std::endl;
         return;
 }
-
+//TODO rename test
 static bool parsing_part(const std::string& representation){
     bool test = false;
 

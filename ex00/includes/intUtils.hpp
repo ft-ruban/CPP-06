@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   intUtils.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevoude <ldevoude@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/23 07:34:06 by ldevoude          #+#    #+#             */
-/*   Updated: 2026/02/25 13:39:15 by ldevoude         ###   ########.fr       */
+/*   Created: 2026/02/25 13:59:33 by ldevoude          #+#    #+#             */
+/*   Updated: 2026/02/25 14:55:23 by ldevoude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "../includes/ScalarConverter.hpp"
-//TODO faire une batterie de tests
+#ifndef INTUTILS_HPP
+#define INTUTILS_HPP
 
-int main(int argc, char *argv[]){
-    if(argc != 2)
-        return(1);
-    std::string argument_converted_to_string = argv[1];
-    ScalarConverter::convert(argument_converted_to_string);
-    return(0);
-}
+#include <iostream>
+#include <stdlib.h>
+
+#define IMPOSSIBLE 1
+#define POSSIBLE 0
+#define FINISHED 1
+#define UNFINISHED 0
+
+void handleInt(std::string& representation);
+
+#endif
