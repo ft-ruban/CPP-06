@@ -7,5 +7,4 @@ SRC += $(addprefix $(MAINDIR), $(addsuffix .cpp, $(MAIN)))
 
 override MAIN := main \
 				 ScalarConverter \
-				 charUtils \
-				 intUtils \
+				 checker \

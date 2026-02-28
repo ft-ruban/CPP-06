@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   intUtils.hpp                                       :+:      :+:    :+:   */
+/*   checker.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevoude <ldevoude@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/25 13:59:33 by ldevoude          #+#    #+#             */
-/*   Updated: 2026/02/25 14:55:23 by ldevoude         ###   ########.fr       */
+/*   Created: 2026/02/27 15:24:27 by ldevoude          #+#    #+#             */
+/*   Updated: 2026/02/28 09:04:43 by ldevoude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INTUTILS_HPP
-#define INTUTILS_HPP
+#ifndef CHECKER_HPP
+#define CHECKER_HPP
 
 #include <iostream>
-#include <stdlib.h>
+#include <limits.h>
+#include <errno.h>
+#include "ScalarConverter.hpp"
 
-#define IMPOSSIBLE 1
-#define POSSIBLE 0
-#define FINISHED 1
-#define UNFINISHED 0
-
-void handleInt(std::string& representation);
+std::size_t case_checker(std::string& representation);
 
 #endif
